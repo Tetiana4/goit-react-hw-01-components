@@ -12,9 +12,7 @@ export const List = styled.ul`
 `;
 export const ListItem = styled.li`
   display: flex;
-
   margin-top: 10px;
-  vertical-align: middle;
   border-bottom: 1px;
   padding: 20px;
   background-color: #f5f2f3;
@@ -31,6 +29,8 @@ export const Name = styled.p`
 export const Status = styled.span`
   width: 20px;
   height: 20px;
+  border-radius: 50%;
+  margin: 5px;
 
-  color: #141313;
+  background-color: ${(props) => (props.isOnline ? "red" : "green")};
 `;

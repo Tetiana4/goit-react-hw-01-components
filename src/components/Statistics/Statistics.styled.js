@@ -25,11 +25,15 @@ export const List = styled.ul`
   display: flex;
   padding: 20px;
   margin: 0;
-  background-color: #70adb4;
+  background-color: #e7e1e8;
 `;
 
+const random = () => {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+};
+
 export const ListItem = styled.li`
-  background-color: #e2eef0;
+  background-color: ${random};
 
   padding: 5px;
   margin-top: 10px;
@@ -39,4 +43,3 @@ export const Span = styled.span`
   display: block;
   text-align: center;
 `;
-// justify-content: space-between;
