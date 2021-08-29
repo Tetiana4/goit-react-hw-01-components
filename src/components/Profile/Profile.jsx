@@ -8,28 +8,35 @@ import {
   Span,
 } from "./Profile.styled";
 
-export default function Profile({ name, tag, location, avatar, stats }) {
+export default function Profile(props) {
+  const {
+    name,
+    tag,
+    location,
+    avatar,
+    stats: { followers, views, likes },
+  } = props;
   return (
-    <Container class="profile">
-      <Description class="description">
-        <Image src={avatar} alt="Аватар пользователя" class="avatar" />
+    <Container>
+      <Description>
+        <Image src={avatar} alt="Аватар пользователя" />
         <Name>{name}</Name>
-        <p class="tag">{tag}</p>
-        <p class="location">{location}</p>
+        <p>{tag}</p>
+        <p>{location}</p>
       </Description>
 
       <List>
         <li>
           <Span>Followers</Span>
-          <Span>{stats.followers}</Span>
+          <Span>{followers}</Span>
         </li>
         <li>
           <Span>Views</Span>
-          <Span>{stats.views}</Span>
+          <Span>{views}</Span>
         </li>
         <li>
           <Span>Likes</Span>
-          <Span>{stats.likes}</Span>
+          <Span>{likes}</Span>
         </li>
       </List>
     </Container>

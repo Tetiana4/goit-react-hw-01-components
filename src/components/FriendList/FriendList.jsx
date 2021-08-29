@@ -4,11 +4,11 @@ import { List, ListItem, Image, Name, Status } from "./FriendList.styled";
 export default function FriendList({ friends }) {
   return (
     <List>
-      {friends.map((item) => (
-        <ListItem key={item.id}>
-          <Status isOnline={item.isOnline}></Status>
-          <Image src={item.avatar} alt={item.name} width="48" />
-          <Name>{item.name}</Name>
+      {friends.map(({ id, isOnline, avatar, name }) => (
+        <ListItem key={id}>
+          <Status isOnline={isOnline}></Status>
+          <Image src={avatar} alt={name} width="48" />
+          <Name>{name}</Name>
         </ListItem>
       ))}
     </List>
