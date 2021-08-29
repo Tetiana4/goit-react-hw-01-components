@@ -1,25 +1,28 @@
 import styled from "@emotion/styled";
 
 export const List = styled.ul`
-  background-color: #cec1c5;
+  margin: 0 auto 30px;
+  padding: 10px 10px 20px;
   width: 200px;
 
-  margin-left: auto;
-  margin-right: auto;
   list-style: none;
-  padding: 10px 10px 20px;
+  background-color: #cec1c5;
   box-shadow: 10px 5px 5px #898183;
 `;
+
 export const ListItem = styled.li`
-  display: flex;
   margin-top: 10px;
-  border-bottom: 1px;
   padding: 20px;
+  display: flex;
+
   background-color: #f5f2f3;
+  border-bottom: 1px;
 `;
+
 export const Image = styled.img`
-  border: 1px solid black;
   margin-right: 10px;
+
+  border: 1px solid black;
 `;
 
 export const Name = styled.p`
@@ -27,10 +30,10 @@ export const Name = styled.p`
 `;
 
 export const Status = styled.span`
+  margin: 5px;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  margin: 5px;
 
+  border-radius: 50%;
   background-color: ${(props) => (props.isOnline ? "red" : "green")};
 `;
