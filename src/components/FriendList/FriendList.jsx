@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { List, ListItem, Image, Name, Status } from "./FriendList.styled";
 
-export default function FriendList({ friends }) {
+const FriendList = ({ friends }) => {
   return (
     <List>
       {friends.map(({ id, isOnline, avatar, name }) => (
@@ -13,7 +13,7 @@ export default function FriendList({ friends }) {
       ))}
     </List>
   );
-}
+};
 
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
@@ -25,3 +25,5 @@ FriendList.propTypes = {
     })
   ),
 };
+
+export default FriendList;

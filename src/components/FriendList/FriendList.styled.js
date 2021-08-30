@@ -16,7 +16,7 @@ export const ListItem = styled.li`
   display: flex;
 
   background-color: #f5f2f3;
-  border-bottom: 1px;
+  border: 1px solid black;
 `;
 
 export const Image = styled.img`

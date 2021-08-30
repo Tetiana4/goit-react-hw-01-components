@@ -8,7 +8,7 @@ import {
   Span,
 } from "./Profile.styled";
 
-export default function Profile(props) {
+const Profile = (props) => {
   const {
     name,
     tag,
@@ -41,7 +41,7 @@ export default function Profile(props) {
       </List>
     </Container>
   );
-}
+};
 
 Profile.propTypes = {
   name: PropTypes.string.isRequired,
@@ -54,3 +54,5 @@ Profile.propTypes = {
     likes: PropTypes.number.isRequired,
   }),
 };
+
+export default Profile;
