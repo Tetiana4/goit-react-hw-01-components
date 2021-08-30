@@ -21,7 +21,7 @@ export default function Profile(props) {
       <Description>
         <Image src={avatar} alt="Аватар пользователя" />
         <Name>{name}</Name>
-        <p>{tag}</p>
+        <p>@{tag}</p>
         <p>{location}</p>
       </Description>
 
